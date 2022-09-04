@@ -1,6 +1,6 @@
 package com.expenseTracker.constants
 
-object RouteConstants {
+object routeConstants {
 
     // Cross Origin Route for React JS frontend
     const val CORS = "http://localhost:3000"

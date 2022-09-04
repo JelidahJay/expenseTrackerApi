@@ -1,8 +1,8 @@
-package com.expenseTracker.Services
+package com.expenseTracker.services
 
-import com.expenseTracker.Entities.Entity.Expense
-import com.expenseTracker.Repositories.ExpenseRepository
-import com.expenseTracker.Repositories.CategoryRepository
+import com.expenseTracker.entities.Entity.Expense
+import com.expenseTracker.repositories.ExpenseRepository
+import com.expenseTracker.repositories.CategoryRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service

@@ -1,4 +1,4 @@
-package com.expenseTracker.Utilities
+package com.expenseTracker.utilities
 
 import org.hibernate.annotations.CreationTimestamp
 import org.hibernate.annotations.UpdateTimestamp

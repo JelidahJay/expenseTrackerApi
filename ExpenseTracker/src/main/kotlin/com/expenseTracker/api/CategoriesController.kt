@@ -1,8 +1,8 @@
 package com.expenseTracker.api
 
-import com.expenseTracker.Entities.Entity.Category
-import com.expenseTracker.Services.CategoryService
-import com.expenseTracker.constants.RouteConstants
+import com.expenseTracker.entities.Entity.Category
+import com.expenseTracker.services.CategoryService
+import com.expenseTracker.constants.routeConstants
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -12,9 +12,9 @@ import javax.validation.Valid
 /**
  * Categories Controller to process incoming REST API requests, preparing the Category Entity and returning a response.
  */
-@CrossOrigin(origins = [RouteConstants.CORS])
+@CrossOrigin(origins = [routeConstants.CORS])
 @RestController
-@RequestMapping(RouteConstants.ControllerMapping)
+@RequestMapping(routeConstants.ControllerMapping)
 class CategoriesController
     (
     // Category Service where all business functionalities will be fetched for the Categories Controller.
@@ -26,7 +26,7 @@ class CategoriesController
      * Get all Categories.
      * URL: http://localhost:8080/api/expenseTracker/v1/categories
      */
-    @GetMapping(RouteConstants.categories)
+    @GetMapping(routeConstants.categories)
     fun getAllCategories(): ResponseEntity<List<Category>> {
         return ResponseEntity.ok(categoryService.getAllCategories())
     }
@@ -35,7 +35,7 @@ class CategoriesController
      * Get Category by id.
      * URL: http://localhost:8080/api/expenseTracker/v1/categories/{CategoryID}
      */
-    @GetMapping(RouteConstants.getCategoryById)
+    @GetMapping(routeConstants.getCategoryById)
     fun getCategoryById(@PathVariable("CategoryID") CategoryID: String): ResponseEntity<Category> {
 
         return ResponseEntity.ok(categoryService.getCategoryById(CategoryID))
@@ -45,7 +45,7 @@ class CategoriesController
      * Get Category by category name.
      * URL: http://localhost:8080/api/expenseTracker/v1/categories/categoryName/{categoryName}
      */
-    @GetMapping(RouteConstants.getCategoryByName)
+    @GetMapping(routeConstants.getCategoryByName)
     fun getCategoryByName(@PathVariable("categoryName") categoryName: String): ResponseEntity<List<Category?>?> {
         return ResponseEntity.ok(categoryService.getCategoryByName(categoryName))
     }
@@ -54,7 +54,7 @@ class CategoriesController
      * Create a new Category.
      * URL: http://localhost:8080/api/expenseTracker/v1/categories
      */
-    @PostMapping(RouteConstants.createCategory)
+    @PostMapping(routeConstants.createCategory)
     fun createCategory(@RequestBody @Valid payload: Category): Category {
         return categoryService.createCategory(payload)
     }
@@ -63,7 +63,7 @@ class CategoriesController
      * Update an existing Category.
      * URL: http://localhost:8080/api/expenseTracker/v1/categories/{CategoryID}
      */
-    @PutMapping(RouteConstants.updateCategory)
+    @PutMapping(routeConstants.updateCategory)
     fun updateCategoryById(@RequestParam("CategoryID") CategoryID: String, @RequestBody payload: Category): Category =
         categoryService.updateCategoryById(CategoryID, payload)
 
@@ -71,7 +71,7 @@ class CategoriesController
      * Delete a Category
      * URL: http://localhost:8080/api/expenseTracker/v1/categories/{CategoryID}
      */
-    @DeleteMapping(RouteConstants.deleteCategory)
+    @DeleteMapping(routeConstants.deleteCategory)
     fun deleteCategoryById(@PathVariable("CategoryID") CategoryID: String): Unit =
         categoryService.deleteCategoryById(CategoryID)
 }

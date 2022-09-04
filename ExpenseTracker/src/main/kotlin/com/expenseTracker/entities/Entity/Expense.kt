@@ -1,6 +1,6 @@
-package com.expenseTracker.Entities.Entity
+package com.expenseTracker.entities.Entity
 
-import com.expenseTracker.Utilities.BaseEntity
+import com.expenseTracker.utilities.BaseEntity
 import java.util.Date
 import javax.persistence.*
 

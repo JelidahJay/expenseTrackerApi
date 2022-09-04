@@ -1,6 +1,6 @@
-package com.expenseTracker.Repositories
+package com.expenseTracker.repositories
 
-import com.expenseTracker.Entities.Entity.Expense
+import com.expenseTracker.entities.Entity.Expense
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

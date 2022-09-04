@@ -1,6 +1,6 @@
-package com.expenseTracker.Entities.Entity
+package com.expenseTracker.entities.Entity
 
-import com.expenseTracker.Utilities.BaseEntity
+import com.expenseTracker.utilities.BaseEntity
 import com.fasterxml.jackson.annotation.JsonIgnore
 import org.jetbrains.annotations.NotNull
 import javax.persistence.*

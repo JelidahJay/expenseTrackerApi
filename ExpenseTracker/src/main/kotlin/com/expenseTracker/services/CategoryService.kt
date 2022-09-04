@@ -1,7 +1,7 @@
-package com.expenseTracker.Services
+package com.expenseTracker.services
 
-import com.expenseTracker.Entities.Entity.Category
-import com.expenseTracker.Repositories.CategoryRepository
+import com.expenseTracker.entities.Entity.Category
+import com.expenseTracker.repositories.CategoryRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.domain.Sort
 import org.springframework.http.HttpStatus
